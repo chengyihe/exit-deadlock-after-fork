@@ -92,8 +92,8 @@ int main()
     pid = fork();
     if (pid == 0) {
         printf("%d:%d, child process after fork\n", getpid(), gettid());
-        printf("%d:%d, is ready to exit(1)\n", getpid(), gettid());
-        exit(1);
+        printf("%d:%d, is ready to _exit(1)\n", getpid(), gettid());
+        _exit(1);
     }
 
     printf("%d:%d, parent process after fork\n", getpid(), gettid());
